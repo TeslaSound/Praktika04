@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+    
+<body>
+    <div class="tools">
+
+    <!-- создаем контейнер для формы фигур (клеточек) -->
+    <div>
+        <p>Shape Form</p>
+        <select>
+            <!-- квадрат -->
+            <option value="squares">Square</option>
+
+            <!-- круг -->
+            <option value="circles">Circle</option>
+        </select>
+    </div>
+
+    <!-- создаем контейнер для ширины и количества клеточек -->
+    <div class="numbers">
+        <!-- ширина -->
+        <div>
+            <!-- устанавливаем диапазон от 10 до 50 (объяснение ниже) -->
+            <p>Shape Width <br> <span>(from 10 to 50)</span></p>
+            <input type="number" value="20" class="shapeWidth">
+        </div>
+
+        <!-- количество -->
+        <div>
+            <!-- устанавливаем аналогичный диапазон -->
+            <p>Shape Number <br> <span>(from 10 to 50)</span></p>
+            <input type="number" value="30" class="shapeNumber">
+        </div>
+    </div>
+
+    <!-- создаем контейнер для цветов -->
+    <div class="colors">
+        <!-- цвет фона -->
+        <div>
+            <p>Background Color</p>
+            <input type="color" value="#ffff00" required class="backColor">
+        </div>
+
+        <!-- цвет фигуры (для раскрашивания) -->
+        <div>
+            <p>Shape Color</p>
+            <input type="color" value="#0000ff" class="shapeColor">
+        </div>
+    </div>
+
+    <!-- создаем контейнер для кнопок -->
+    <div class="buttons">
+        <!-- кнопка для создания холста -->
+        <input type="button" value="Generate Canvas" class="generate">
+
+        <!-- кнопка для показа/скрытия номеров клеточек (фигур) -->
+        <input type="button" value="Show/Hide Numbers" class="show">
+
+        <!-- кнопка сохранения/удаления изображения (результата) -->
+        <input type="button" value="Save/Delete Image" class="save">
+
+        <!-- кнопка для очистки холста с сохранением ширины и количества фигур -->
+        <input type="button" value="Clear Canvas" class="clear">
+
+        <!-- кнопка для полного удаления холста -->
+        <input type="button" value="Delete Canvas" class="delete">
+    </div>
+</div>
+
+<!-- холст -->
+<canvas></canvas>  
+</body>  
+</html>
